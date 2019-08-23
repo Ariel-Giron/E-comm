@@ -1,11 +1,11 @@
 <?php
-	//conexion 'conexion';
+	//include 'conexion.php';
 ?>
 <html lang="es">
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-	<title>Inicio</title>
+	<title>Vender</title>
 	<link rel="stylesheet" href="css/bootstrap.min.css">
 	<link rel="stylesheet" href="css/estilos.css">
     <!--empieza el scrip de la galeria-->
@@ -29,7 +29,6 @@ function rotar_imagen(){
 -->
         <!--termina el scrip de la galeria-->
 </head>
-
 <body >
 	<header>
 		<nav class="navbar navbar-inverse navbar-static-top" role="navigation">
@@ -88,34 +87,30 @@ function rotar_imagen(){
     </section>
     -->
     <!--termina galeria-->
-    
+    <?php
+    	include 'conexion.php';
+    	if (isset($_POST['save'])) 
+    	{
+    		$DBImage->uploadImage($_FILES);
+    	}
+    ?>
     
 	<section class="main container">
 		<div class="row">
-		  	<article class="col-md-3"> 	
+		  	<article class="col-md-6"> 	
 				<div class="miga-de-pan">
 					<p>Tienes montones de experiencias nuevas esperándote a tan solo un clic,
  					desde descuentos en consolas hasta complementos populares y arcades emblemáticos</p>
 				</div>
 			</article>
-			<article class="col-md-3"> 	
+			
+			<article class="col-md-6"> 	
 				<div class="miga-de-pan">
 					<p>Tienes montones de experiencias nuevas esperándote a tan solo un clic,
  					desde descuentos en consolas hasta complementos populares y arcades emblemáticos</p>
 				</div>
 			</article>
-			<article class="col-md-3"> 	
-				<div class="miga-de-pan">
-					<p>Tienes montones de experiencias nuevas esperándote a tan solo un clic,
- 					desde descuentos en consolas hasta complementos populares y arcades emblemáticos</p>
-				</div>
-			</article>
-			<article class="col-md-3"> 	
-				<div class="miga-de-pan">
-					<p>Tienes montones de experiencias nuevas esperándote a tan solo un clic,
- 					desde descuentos en consolas hasta complementos populares y arcades emblemáticos</p>
-				</div>
-			</article>
+			
 			</section>
 <!--
 			<aside class="col-md-3 hidden-xs hidden-sm">
